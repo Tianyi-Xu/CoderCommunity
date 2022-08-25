@@ -10,9 +10,22 @@ import java.util.List;
 public interface DiscussPostMapper {
     
     // paged query
-    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit); // dynamic sql query, use userId when show post in user's personal page
+    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit, int orderMode); // dynamic sql query, use userId when show post in user's personal page
 
-    // int
+    // get the number of posts of the user
     int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int
+
+    updateCommentCount(int id, int commentCount);
+
+    int updateType(int id, int type);
+
+    int updateStatus(int id, int status);
+
+    int updateScore(int id, double score);
 }

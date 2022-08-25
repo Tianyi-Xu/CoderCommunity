@@ -1,20 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="httlp://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="https://static.nowcoder.com/images/logo_87_87.png"/>
-    <title>牛客网-激活账号</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+	<title>Coder Community - Verify your account</title>
 </head>
 <body>
 	<div>
+		<h1>
+			<b th:text="${email}">xxx@xxx.com</b>,  Please verify your email address
+		</h1>
 		<p>
-			<b>xxx@xxx.com</b>, 您好!
+			Thanks for joining Bear Coder Community! Please verify your email to activate your account and begin your journey with us!
 		</p>
-		<p>
-			您正在注册牛客网, 这是一封激活邮件, 请点击 
-			<a href="#">http://www.nowcoder.com/activation/abcdefg123456.html</a>,
-			激活您的牛客账号!
-		</p>
+		<form th:action="@{${url}}">
+			<div class="col-sm-10 text-center">
+				<button type="submit" class="btn btn-info text-white form-control">Activate the account</button>
+			</div>
+		</form>
+
+		</div>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

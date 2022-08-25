@@ -148,3 +148,11 @@ em {
 	font-style: normal;
 	color: red;
 }
+
+.btn-info {
+	background-color: #035397 !important;
+}
+
+.text-info {
+	color: #035397 !important;;
+}
