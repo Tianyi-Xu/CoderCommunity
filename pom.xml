@@ -15,9 +15,7 @@
 	<description>coder community</description>
 	<properties>
 		<properties>
-			<java.version>11</java.version>
-			<maven.compiler.target>11</maven.compiler.target>
-			<maven.compiler.source>11</maven.compiler.source>
+			<java.version>12</java.version>
 		</properties>
 	</properties>
 	<dependencies>
